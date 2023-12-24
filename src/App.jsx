@@ -1,12 +1,20 @@
-import React from 'react'
+import Rreact from 'react'
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div>
-         <h1 className="text-3xl font-bold underline text-red-500">
-      Hello world!
-    </h1>
-    </div>
+    <main className='bg-slate-300/20'>
+      <BrowserRouter>
+        <Navbar/> 
+        <Routes>
+          <Route path="/" element={'Home'} />
+          <Route path="/about" element={'About'} />
+          <Route path="/projects" element={'Projects'} />
+          <Route path="/contact" element={'Contact'} />
+        </Routes>
+      </BrowserRouter>
+    </main>
   )
 }
 
