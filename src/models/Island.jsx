@@ -16,7 +16,7 @@ const Island = (props) => {
 
     const islandRef = useRef();
 
-  const { nodes, materials } = useGLTF("/island.glb");
+  const { nodes, materials } = useGLTF(islandScene);
   return (
     // ^ warap all the elements of 3d folder a.group
     <a.group ref={islandRef} {...props} >
