@@ -3,6 +3,8 @@ import { Canvas } from '@react-three/fiber'
 import Loader from '../components/Loader'
 import Island from '../models/Island'
 import Sky  from '../models/Sky'
+import Bird from '../models/Bird'
+import Plane  from '../models/Plane'
 
 {/* <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
     POPUP
@@ -39,12 +41,14 @@ const Home =() => {
                 <spotLight/>
                 <hemisphereLight skyColor='#b1e1ff' groundColor='#000000' intensity={1}/>//& illuminates the scene with a gradient
                 
+                <Bird/>
                 <Sky/>
                 <Island
                     scale={islandScale}
                     position={islandPosition}
                     rotation={islandRotation}
                 />
+                <Plane/>
             </Suspense>
         </Canvas>
     </section>
