@@ -65,6 +65,53 @@ const Island = ({isRotating, setIsRotating, ...props}) => {
         handlePointerUp(e);
       }
     }
+
+    //^ handel event on key down
+    const handelKeyDown=(e)=>{
+      if(e.key === 'ArrowLeft'){
+        if(!isRotating) setIsRotating(true);
+        islandRef.current.rotation.y += 0.01 * Math.PI;
+      }else if(e.key === 'ArrowRight'){
+        if(!isRotating) setIsRotating(true);
+        islandRef.current.rotation.y -= 0.01 * Math.PI;
+      }
+    }
+    //^ handel event on key up
+    const handelKeyUp=(e)=>{
+      if(e.key === 'ArrowLeft' || e.key === 'ArrowRight'){
+        setIsRotating(false);
+      }
+    }
+
+    //^ the way we're going to put all of these to action by using useFrame hook
+    useFrame(()=>{
+      if(!isRotating){
+        rotationSpeed.current *= dampingFactor; //& we can apply damping factor that makes plane go smoother
+        if(Math.abs(rotationSpeed.current)<0.01){ //& ccompletly stop the roation if seed is low
+          rotationSpeed.current = 0;
+        }
+      }
+      else{
+        const rotation = islandRef.current.rotation.y;
+      }
+    })
+
+    //^ useEffect to add eventlistner
+    useEffect(() => {
+      document.addEventListener("pointerdown", handlePointerDown);
+      document.addEventListener("pointerup", handlePointerUp)
+      document.addEventListener("pointermove", handlePointerMove);
+      document.addEventListener('keydown', handelKeyDown);
+      document.addEventListener('keyup', handelKeyUp);
+
+      return () =>{
+        document.removeEventListener("pointerdown", handlePointerDown);
+        document.removeEventListener("pointerup", handlePointerUp)
+        document.removeEventListener("pointermove", handlePointerMove);
+        document.removeEventListener('keydown', handelKeyDown);
+        document.removeEventListener('keyup', handelKeyUp);
+      }
+    }, [gl, handlePointerDown, handlePointerUp, handlePointerMove])
   return (
     // ^ warap all the elements of 3d folder a.group
     <a.group ref={islandRef} {...props} >
