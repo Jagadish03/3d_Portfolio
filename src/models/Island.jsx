@@ -12,11 +12,59 @@ import { useFrame, useThree } from "@react-three/fiber";
 import {a} from '@react-spring/three' //& for using animation purpose 
 import islandScene from '../assets/3d/island.glb'
 
-const Island = (props) => {
+// ^ implementing rotating of island
+const Island = ({isRotating, setIsRotating, ...props}) => {
 
     const islandRef = useRef();
 
-  const { nodes, materials } = useGLTF(islandScene);
+    const{gl, viewport} = useThree(); //^ hook
+    const { nodes, materials } = useGLTF(islandScene);
+    
+    // ^ we have use ref to get last mouse posn
+    const lastX = useRef(0);
+    const rotationSpeed = useRef(0);
+    const dampingFactor = 0.95; //^ when we scroll it how fast does it move
+
+    //^ when we press the mouse button down
+    const handlePointerDown = (e) => {
+      e.stopProgation();
+      e.preventDefault();
+      setIsRotating(true);
+      //^ to check wether what kind of click
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      lastX.current = clientX;
+    }
+    //^ when we release the mouse
+    const handlePointerUp = (e) => {
+      e.stopProgation();
+      e.preventDefault();
+      setIsRotating(false);
+
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      lastX.current = clientX;
+
+      //^ to change horizontal position
+      const delta = (clientX - lastX.current) / viewport.width;
+
+      //^ to update the island rotation based on the mouse 
+      islandRef.current.rotation.y += delta * 0.01 * Math.PI; //& because its circle
+
+      // ^ to update the reference for the last client
+      lastX.current = clientX;
+
+      //^ update the rotation speed
+      rotationSpeed.current = delta * 0.01 * Math.PI;
+    }
+    //^ to move it
+    const handlePointerMove = (e) => {
+      e.stopProgation();
+      e.preventDefault();
+      
+      //^ only when to happen if we are rotating
+      if(isRotating){
+        handlePointerUp(e);
+      }
+    }
   return (
     // ^ warap all the elements of 3d folder a.group
     <a.group ref={islandRef} {...props} >
