@@ -2,6 +2,7 @@ import {React ,Suspense} from 'react'
 import { Canvas } from '@react-three/fiber'
 import Loader from '../components/Loader'
 import Island from '../models/Island'
+import Sky  from '../models/Sky'
 
 {/* <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
     POPUP
@@ -37,7 +38,8 @@ const Home =() => {
                 <pointLight/>//& emits lights in all directions from single point
                 <spotLight/>
                 <hemisphereLight skyColor='#b1e1ff' groundColor='#000000' intensity={1}/>//& illuminates the scene with a gradient
-
+                
+                <Sky/>
                 <Island
                     scale={islandScale}
                     position={islandPosition}
