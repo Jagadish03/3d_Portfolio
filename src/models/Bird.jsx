@@ -18,16 +18,20 @@ const Bird = () => {
     
       //^ to move across island
       if(birdRef.current.position.x > camera.position.x + 10){
+        //^ change direction to backward and rotate the bird 180 degree on the y - axis
         birdRef.current.rotation.y = Math.PI;
       }else if(birdRef.current.position.x < camera.position.x - 10){
+        //^ change direction to forward and rest the birds rotaion
         birdRef.current.rotation.y = 0;
       }
 
     //^ update the x and z position 
     if(birdRef.current.rotation.y === 0){
+      //^ moving forward
       birdRef.current.position.x += 0.01;
       birdRef.current.position.z -= 0.01;
     }else{
+      //^ moving backward
       birdRef.current.position.x -= 0.01;
       birdRef.current.position.z += 0.01;
     }
