@@ -96,7 +96,7 @@ const Island = ({isRotating, setIsRotating, setCurrentStage,  ...props}) => {
       }
       else{
         const rotation = islandRef.current.rotation.y;
-        // ^github vv
+        // ^github ccode below 
         /**
        * Normalize the rotation value to ensure it stays within the range [0, 2 * Math.PI].
        * The goal is to ensure that the rotation value remains within a specific range to
