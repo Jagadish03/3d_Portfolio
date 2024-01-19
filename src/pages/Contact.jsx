@@ -4,6 +4,7 @@ import { Canvas } from '@react-three/fiber';
 import Loader  from '../components/Loader';
 
 import Fox from '../models/Fox';
+import useAlert from '../hooks/useAlert';
 
 function Contact() {
   const formRef = useRef(null);
@@ -12,6 +13,8 @@ function Contact() {
   const [isLoading, setIsLoading] = useState(false);
 
   const[currentAnimation, setCurrentAnimation]= useState('idle')
+
+  const{alert, showAlert, hideAlert} = useAlert();
 
   //^ handleChange works for all of these inputs is it's taking the key press event based on that event it calls setForm fn where it spreads out all of the other properties and select a specific field to update
   const handleChange = (e) => {
@@ -43,10 +46,12 @@ function Contact() {
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
     ).then(() => {
       setIsLoading(false);
+      showAlert({show:true, text: 'Message sent sucessfully!!', type:'success'})
       //* TODO:show success message
       //* TODO:Hide an alert
 
       setTimeout(()=>{
+        hideAlert();
         setCurrentAnimation('idle')
         setForm({name:'', email:'', message:''});
       },[3000])
@@ -56,12 +61,14 @@ function Contact() {
       setIsLoading(false);
       setCurrentAnimation('idle')
       console.log(error);
+      showAlert({show:true, text:"I did't receive your message", type:'danger'})
       //* show error message
     })
   };
 
   return (
     <section className='relative flex lg:flex-row flex-col max-container'>
+      {alert.show && <Alert{...alert}/>}
       <div className='flex-1 min-w-[50%] flex flex-col'>
         <h1 className='head-text marker:'>Get in Touch</h1>
 
