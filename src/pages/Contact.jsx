@@ -11,6 +11,8 @@ function Contact() {
   //^ while sending request we need to have some loding so use useState
   const [isLoading, setIsLoading] = useState(false);
 
+  const[currentAnimation, setCurrentAnimation]= useState('idle')
+
   //^ handleChange works for all of these inputs is it's taking the key press event based on that event it calls setForm fn where it spreads out all of the other properties and select a specific field to update
   const handleChange = (e) => {
     setForm({...form, [e.target.name]: e.target.value});  //& it is going to all the properties from the from
@@ -18,12 +20,15 @@ function Contact() {
   
   //* whenever we click on input and start typing the 3d fox has to walk so it mush focus
 
-  const handleFoucs =() => {};
-  const handleBlur = () => {};
+  const handleFoucs =() => setCurrentAnimation('walk');
+  const handleBlur = () => setCurrentAnimation('idle');
   //^ handelSubmit gets the final key press event
   const handleSubmit = (e) => {
     e.preventDefault();   //& to not load page
     setIsLoading(true);   //& initiate the loading process
+    setCurrentAnimation('hit');
+
+    console.log(import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY);
     emailjs.send(
         //^ SPECIFIC ENV VARIABLES
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -40,9 +45,16 @@ function Contact() {
       setIsLoading(false);
       //* TODO:show success message
       //* TODO:Hide an alert
-      setForm({name:'', email:'', message:''});
+
+      setTimeout(()=>{
+        setCurrentAnimation('idle')
+        setForm({name:'', email:'', message:''});
+      },[3000])
+
+      
     }).catch((error)=>{
       setIsLoading(false);
+      setCurrentAnimation('idle')
       console.log(error);
       //* show error message
     })
@@ -97,7 +109,7 @@ function Contact() {
           /> 
           </label>
           <button
-          type='button'
+          type='submit'
           className='btn'
           disabled={isLoading}
           onFocus={handleFoucs}
@@ -118,10 +130,12 @@ function Contact() {
           }}
         >
           <directionalLight intensity={2.5} postion={[0,0,1]}/>
+          <ambientLight intensity={0.5}/>
           //* suspence allows us to load fox nicely
           <Suspense fallback={<Loader/>}>
             //* Fox component 
             <Fox 
+              currentAnimation={currentAnimation}
               position={[0.5,0.35,0]}
               rotation={[12.6,-0.6,0]}
               scale={[0.5,0.5,0.5]}
