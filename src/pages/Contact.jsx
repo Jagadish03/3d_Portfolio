@@ -1,4 +1,9 @@
-import React, { useRef, useState } from 'react'
+import React, { Suspense, useRef, useState } from 'react'
+import emailjs from '@emailjs/browser';
+import { Canvas } from '@react-three/fiber';
+import Loader  from '../components/Loader';
+
+import Fox from '../models/Fox';
 
 function Contact() {
   const formRef = useRef(null);
@@ -19,6 +24,28 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();   //& to not load page
     setIsLoading(true);   //& initiate the loading process
+    emailjs.send(
+        //^ SPECIFIC ENV VARIABLES
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        {
+          form_name:form.name,
+          to_name:"Jagadish",
+          form_email:form.email,
+          to_email:'jagadishmunavalli35@gmail.com',
+          message:form.message
+        },
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+    ).then(() => {
+      setIsLoading(false);
+      //* TODO:show success message
+      //* TODO:Hide an alert
+      setForm({name:'', email:'', message:''});
+    }).catch((error)=>{
+      setIsLoading(false);
+      console.log(error);
+      //* show error message
+    })
   };
 
   return (
@@ -79,6 +106,28 @@ function Contact() {
             {isLoading ? 'Sending...' : 'Send Message'}
           </button>
         </form>
+      </div>
+
+      <div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]'>
+        <Canvas 
+          camera={{
+            postion:[0,0,5],
+            fov:75,
+            near:0.1,
+            far:1000
+          }}
+        >
+          <directionalLight intensity={2.5} postion={[0,0,1]}/>
+          //* suspence allows us to load fox nicely
+          <Suspense fallback={<Loader/>}>
+            //* Fox component 
+            <Fox 
+              position={[0.5,0.35,0]}
+              rotation={[12.6,-0.6,0]}
+              scale={[0.5,0.5,0.5]}
+            />
+          </Suspense>
+        </Canvas>
       </div>
     </section>
   )
