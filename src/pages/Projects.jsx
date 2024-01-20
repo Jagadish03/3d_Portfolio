@@ -51,7 +51,7 @@ function Projects() {
       ))}
     </div>
 
-    <hr/>
+    <hr />
     </section>
   )
 }
