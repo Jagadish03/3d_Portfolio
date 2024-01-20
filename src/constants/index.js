@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { meta, school, puc, be } from "../assets/images";
 import {
     car,
     contact,
@@ -99,40 +99,32 @@ export const skills = [
 
 export const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
-        iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
+        title: "Kendriya Vidyalaya Dharwad",
+        company_name: "High School",
+        icon: school,
         iconBg: "#fbc3bc",
-        date: "Jan 2021 - Feb 2022",
+        date: "March 2007 - April 2017",
         points: [
             "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
         ],
     },
     {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
-        iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
+        title: "KLE Prerana PU College, BVB Campus, Hubballi",
+        company_name: "Pre University College",
+        icon: puc,
+        iconBg: "#accbe1",
+        date: "June 2017 - April 2019",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+        ],
+    },
+    {
+        title: "KLS Vishwanathrao Deshpande Institute of Technology",
+        company_name: "Bachelor of Engineering",
+        icon: be,
+        iconBg: "#b7e4c7",
+        date: "August 2019 - July 2023",
+        points: [
             "Implementing responsive design and ensuring cross-browser compatibility.",
             "Participating in code reviews and providing constructive feedback to other developers.",
         ],
