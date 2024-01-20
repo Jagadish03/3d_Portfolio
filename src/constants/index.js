@@ -11,31 +11,64 @@ import {
     javascript,
     linkedin,
     mongodb,
-    motion,
     mui,
-    nextjs,
     nodejs,
     pricewise,
     react,
-    redux,
-    sass,
     snapgram,
     summiz,
     tailwindcss,
     threads,
-    typescript
+    bootstrap,
+    java,
+    postman
 } from "../assets/icons";
 
 export const skills = [
+    {
+        imageUrl: html,
+        name: "HTML",
+        type: "Frontend",
+    },
     {
         imageUrl: css,
         name: "CSS",
         type: "Frontend",
     },
     {
+        imageUrl: javascript,
+        name: "JavaScript",
+        type: "Frontend",
+    },
+    {
+        imageUrl: react,
+        name: "React",
+        type: "Frontend",
+    },
+    {
+        imageUrl: nodejs,
+        name: "Node.js",
+        type: "Backend",
+    },
+    {
         imageUrl: express,
         name: "Express",
         type: "Backend",
+    },
+    {
+        imageUrl: mongodb,
+        name: "MongoDB",
+        type: "Database",
+    },
+    {
+        imageUrl: postman,
+        name: "Postman",
+        type: "Database",
+    },
+    {
+        imageUrl: java,
+        name: "JAVA",
+        type: "Programming",
     },
     {
         imageUrl: git,
@@ -48,53 +81,8 @@ export const skills = [
         type: "Version Control",
     },
     {
-        imageUrl: html,
-        name: "HTML",
-        type: "Frontend",
-    },
-    {
-        imageUrl: javascript,
-        name: "JavaScript",
-        type: "Frontend",
-    },
-    {
-        imageUrl: mongodb,
-        name: "MongoDB",
-        type: "Database",
-    },
-    {
-        imageUrl: motion,
-        name: "Motion",
-        type: "Animation",
-    },
-    {
         imageUrl: mui,
         name: "Material-UI",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nextjs,
-        name: "Next.js",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nodejs,
-        name: "Node.js",
-        type: "Backend",
-    },
-    {
-        imageUrl: react,
-        name: "React",
-        type: "Frontend",
-    },
-    {
-        imageUrl: redux,
-        name: "Redux",
-        type: "State Management",
-    },
-    {
-        imageUrl: sass,
-        name: "Sass",
         type: "Frontend",
     },
     {
@@ -103,10 +91,10 @@ export const skills = [
         type: "Frontend",
     },
     {
-        imageUrl: typescript,
-        name: "TypeScript",
+        imageUrl: bootstrap,
+        name: "Bootstrap",
         type: "Frontend",
-    }
+    },
 ];
 
 export const experiences = [
