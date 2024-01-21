@@ -155,6 +155,9 @@ export const experiences = [
         date: "May 2023 - December 2023",
         points: [
             "Project aimed at creating fully-fledged functional web templates for a client.",   
+            "Project aimed at creating fully-fledged functional web templates for a client.",
+            "Designed functional web pages, utilized databases for data collection, storage, and sorting.",
+            "Interpreted design briefs and client specifications from the project proposal",
         ],
     },
 ];
