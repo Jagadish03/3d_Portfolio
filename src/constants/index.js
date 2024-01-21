@@ -1,4 +1,4 @@
-import { meta, school, puc, be } from "../assets/images";
+import {school, puc, be, vercons, jsp } from "../assets/images";
 import {
     car,
     contact,
@@ -21,7 +21,8 @@ import {
     threads,
     bootstrap,
     java,
-    postman
+    postman,
+    mysql
 } from "../assets/icons";
 
 export const skills = [
@@ -58,6 +59,11 @@ export const skills = [
     {
         imageUrl: mongodb,
         name: "MongoDB",
+        type: "Database",
+    },
+    {
+        imageUrl: mysql,
+        name: "MySQL",
         type: "Database",
     },
     {
@@ -112,7 +118,7 @@ export const experiences = [
         title: "KLE Prerana PU College, BVB Campus, Hubballi",
         company_name: "Pre University College",
         icon: puc,
-        iconBg: "#accbe1",
+        iconBg: "#a2d2ff",
         date: "June 2017 - April 2019",
         points: [
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -130,16 +136,27 @@ export const experiences = [
         ],
     },
     {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
-        iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
+        title: "Internship",
+        company_name: "Varcons Technologies Pvt Ltd ",
+        icon: vercons,
+        iconBg: "#F7F749",
+        date: "August 2022 - September 2022",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Project aimed at creating fully-fledged functional web templates for a client.",
+            "Designed functional web pages, utilized databases for data collection, storage, and sorting.",
+            "Interpreted design briefs and client specifications from the project proposal",
+        ],
+    },
+    {
+        title: "Training",
+        company_name: "Jspiders",
+        icon: jsp,
+        iconBg: "#FF850F",
+        date: "May 2023 - December 2023",
+        points: [
+            "Project aimed at creating fully-fledged functional web templates for a client.",
+            "Designed functional web pages, utilized databases for data collection, storage, and sorting.",
+            "Interpreted design briefs and client specifications from the project proposal",
         ],
     },
 ];

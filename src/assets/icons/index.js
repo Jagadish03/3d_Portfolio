@@ -29,6 +29,7 @@ import soundoff from './soundoff.png'
 import bootstrap from './bootstrap.svg'
 import java from './java.svg'
 import postman from './postman.svg'
+import mysql from './mysql.svg'
 
 export {
     css,
@@ -61,5 +62,6 @@ export {
     soundoff,
     bootstrap,
     java,
-    postman
+    postman,
+    mysql
 }
