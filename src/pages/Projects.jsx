@@ -15,7 +15,7 @@ function Projects() {
 
     <div className="mt-5 flex flex-col gap-3 text-slate-500"> 
       <p>
-        About the projects (has to be updated )
+        About the projects
       </p>
     </div>
 

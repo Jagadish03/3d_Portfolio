@@ -111,7 +111,8 @@ export const experiences = [
         iconBg: "#fbc3bc",
         date: "March 2007 - April 2017",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
+            "Central Board of Secondary Education",
+            "CGPA : 7.8",
         ],
     },
     {
@@ -121,7 +122,9 @@ export const experiences = [
         iconBg: "#a2d2ff",
         date: "June 2017 - April 2019",
         points: [
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+            "Karnataka Board",
+            "(PCMCS) Physics, Chemistry, Mathematics, and Computer Science",
+            "CGPA : 6.8"
         ],
     },
     {
@@ -131,8 +134,9 @@ export const experiences = [
         iconBg: "#b7e4c7",
         date: "August 2019 - July 2023",
         points: [
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Visvesvaraya Technological University(VTU)",
+            "Computer science and engineering",
+            "CGPA : 7.9"
         ],
     },
     {
@@ -154,10 +158,7 @@ export const experiences = [
         iconBg: "#FF850F",
         date: "May 2023 - December 2023",
         points: [
-            "Project aimed at creating fully-fledged functional web templates for a client.",   
-            "Project aimed at creating fully-fledged functional web templates for a client.",
-            "Designed functional web pages, utilized databases for data collection, storage, and sorting.",
-            "Interpreted design briefs and client specifications from the project proposal",
+            "Completed an intensive MERN (MongoDB, Express.js, React, Node.js) stack course, gaining comprehensive knowledge and hands-on experience in full-stack web development",   
         ],
     },
 ];
