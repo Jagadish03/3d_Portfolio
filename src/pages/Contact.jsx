@@ -148,7 +148,7 @@ function Contact() {
           <ambientLight intensity={0.5}/>
           //* suspence allows us to load fox nicely
           <Suspense fallback={<Loader/>}>
-            //* Fox component 
+            //* Fox components
             <Fox 
               currentAnimation={currentAnimation}
               position={[0.5,0.35,0]}
