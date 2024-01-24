@@ -159,7 +159,7 @@ function Contact() {
         </Canvas>
       </div>
     </section>
-    <footer className="flex justify-between items-center mt-10 bg-sky-blue">
+    {/* <footer className="flex justify-between items-center mt-10 bg-sky-blue">
       <div className="text-gray-500 ml-5 mb-2 mt-2">© 2024 Jagadish Munavalli - All rights reserved.
       <br/>
       📞: +91 9141078914 <br />
@@ -172,7 +172,7 @@ function Contact() {
           </a>
         ))}
       </div>
-    </footer>
+    </footer> */}
     </>
   )
 }
