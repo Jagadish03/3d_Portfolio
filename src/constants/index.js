@@ -139,7 +139,7 @@ export const experiences = [
         title: "Internship",
         company_name: "Varcons Technologies Pvt Ltd ",
         icon: vercons,
-        iconBg: "#F7F749",
+        iconBg: "#FFF36Ds",
         date: "August 2022 - September 2022",
         points: [
             "Project aimed at creating fully-fledged functional web templates for a client.",
