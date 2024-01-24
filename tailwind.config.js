@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+// tailwind.config.js
+
+module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -16,7 +17,8 @@ export default {
         },
         blue: {
           500: "#2b77e7"
-        }
+        },
+        'sky-blue': '#87e7eb', // Add sky-blue 
       },
       fontFamily: {
         worksans: ["Work Sans", "sans-serif"],

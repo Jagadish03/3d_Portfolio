@@ -15,7 +15,7 @@ function Projects() {
 
     <div className="mt-5 flex flex-col gap-3 text-slate-500"> 
       <p>
-        About the projects (has to be updated )
+        About the projects
       </p>
     </div>
 
@@ -43,7 +43,7 @@ function Projects() {
                   target='_blank'
                   rel='noopener noreferrer'
                   className='font-semibold text-blue-600'>
-                    Live Link
+                    Link
               </Link>
               <img src={arrow} alt="arrow" className='w-4 h-4 object-contain' />
             </div>

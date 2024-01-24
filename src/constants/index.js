@@ -111,7 +111,8 @@ export const experiences = [
         iconBg: "#fbc3bc",
         date: "March 2007 - April 2017",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
+            "Central Board of Secondary Education",
+            "CGPA : 7.8",
         ],
     },
     {
@@ -121,7 +122,9 @@ export const experiences = [
         iconBg: "#a2d2ff",
         date: "June 2017 - April 2019",
         points: [
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+            "Karnataka Board",
+            "(PCMCS) Physics, Chemistry, Mathematics, and Computer Science",
+            "CGPA : 6.8"
         ],
     },
     {
@@ -131,8 +134,9 @@ export const experiences = [
         iconBg: "#b7e4c7",
         date: "August 2019 - July 2023",
         points: [
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Visvesvaraya Technological University(VTU)",
+            "Computer science and engineering",
+            "CGPA : 7.9"
         ],
     },
     {
@@ -154,9 +158,7 @@ export const experiences = [
         iconBg: "#FF850F",
         date: "May 2023 - December 2023",
         points: [
-            "Project aimed at creating fully-fledged functional web templates for a client.",
-            "Designed functional web pages, utilized databases for data collection, storage, and sorting.",
-            "Interpreted design briefs and client specifications from the project proposal",
+            "Completed an intensive MERN (MongoDB, Express.js, React, Node.js) stack course, gaining comprehensive knowledge and hands-on experience in full-stack web development",   
         ],
     },
 ];
@@ -170,56 +172,53 @@ export const socialLinks = [
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/Jagadish03',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: 'https://www.linkedin.com/in/jagadish-s-munavalli-278aba219/',
     }
 ];
 
 export const projects = [
     {
-        iconUrl: pricewise,
+        iconUrl: car,
         theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
+        name: 'F1 website',
+        description: 'Cloned a web page from bootstrap made using HTML, CSS and javascript',
+        link: 'https://github.com/Jagadish03/project-1',
     },
     {
         iconUrl: threads,
         theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
-    },
-    {
-        iconUrl: car,
-        theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+        name: 'Template for Gym Website',
+        description: `This project was aimed at creating fully fledged functional web template(s) for a client of ours. As part
+        of the project, we designed functional web pages, used databases to collect, store, and sort data, by
+        understanding the design briefs and client specifications that were provided in the project proposal.`,
+        link: 'https://github.com/Jagadish03/GYM',
     },
     {
         iconUrl: snapgram,
         theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
+        name: 'IOT-Based Paralysis Patient Healthcare Syste',
+        description: `We have developed a PCB hardware system that monitors a person's BPM (heart rate),
+        temperature, and motion alerts. To display this information, we have created a web page using
+        HTML, CSS, and JavaScript, with the assistance of PHP and MySQL`,
+        
     },
-    {
-        iconUrl: estate,
-        theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
-    },
-    {
-        iconUrl: summiz,
-        theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
-    }
+    // {
+    //     iconUrl: estate,
+    //     theme: 'btn-back-black',
+    //     name: 'Real-Estate Application',
+    //     description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
+    //     link: 'https://github.com/adrianhajdin/projects_realestate',
+    // },
+    // {
+    //     iconUrl: summiz,
+    //     theme: 'btn-back-yellow',
+    //     name: 'AI Summarizer Application',
+    //     description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
+    //     link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+    // }
 ];

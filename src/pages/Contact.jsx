@@ -6,6 +6,12 @@ import Loader  from '../components/Loader';
 import Fox from '../models/Fox';
 import useAlert from '../hooks/useAlert';
 
+import { socialLinks } from '../constants';
+
+function Footer() {
+
+}
+
 function Contact() {
   const formRef = useRef(null);
   const [form, setForm] = useState({name:'', email:'', message:''})
@@ -67,6 +73,7 @@ function Contact() {
   };
 
   return (
+    <>
     <section className='relative flex lg:flex-row flex-col max-container h-[100vh]'>
       {alert.show && <Alert{...alert}/>}
       
@@ -141,7 +148,7 @@ function Contact() {
           <ambientLight intensity={0.5}/>
           //* suspence allows us to load fox nicely
           <Suspense fallback={<Loader/>}>
-            //* Fox component 
+            //* Fox components
             <Fox 
               currentAnimation={currentAnimation}
               position={[0.5,0.35,0]}
@@ -152,6 +159,21 @@ function Contact() {
         </Canvas>
       </div>
     </section>
+    <footer className="flex justify-between items-center mt-10 bg-sky-blue">
+      <div className="text-gray-500 ml-5 mb-2 mt-2">© 2024 Jagadish Munavalli - All rights reserved.
+      <br/>
+      📞: +91 9141078914 <br />
+      ✉️: munavallijagadish@gmail.com
+      </div>
+      <div className="flex space-x-4">
+        {socialLinks.map((link, index) => (
+          <a key={index} href={link.link} target="_blank" rel="noopener noreferrer">
+            <img src={link.iconUrl} alt={link.name} className="w-6 h-6 mb-1 mr-5" />
+          </a>
+        ))}
+      </div>
+    </footer>
+    </>
   )
 }
 
